@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void CallApi(String str ) {
         Moshi moshi = new Moshi.Builder().addLast(new KotlinJsonAdapterFactory()).build();
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://mdev1001-m2023-api.onrender.com/")
+                .baseUrl("https://www.omdbapi.com/?i=tt3896198&apikey=99c335c0")
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build();
 
