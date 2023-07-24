@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddEditMovieActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTL"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/titleTextTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Movies"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/addBT"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/idTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Id"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarTL" />
+
+        <EditText
+            android:id="@+id/idET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/idTV" />
+
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idET" />
+
+        <EditText
+            android:id="@+id/titleET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+        <TextView
+            android:id="@+id/studioTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Studio"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/titleET" />
+
+        <EditText
+            android:id="@+id/StudioET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/studioTV" />
+
+        <TextView
+            android:id="@+id/genresTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Genres"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/StudioET" />
+
+        <EditText
+            android:id="@+id/genresET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/genresTV" />
+
+        <TextView
+            android:id="@+id/directorsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Directors"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/genresET" />
+
+        <EditText
+            android:id="@+id/directorsET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/directorsTV" />
+
+        <TextView
+            android:id="@+id/writersTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Writers"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/directorsET" />
+
+        <EditText
+            android:id="@+id/writersET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/writersTV" />
+
+        <TextView
+            android:id="@+id/actorsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Actors"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/writersET" />
+
+        <EditText
+            android:id="@+id/actorsET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/actorsTV" />
+
+        <TextView
+            android:id="@+id/lengthTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Length"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/yearTV"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/actorsET" />
+
+        <EditText
+            android:id="@+id/lengthET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/lengthTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/lengthTV" />
+
+        <TextView
+            android:id="@+id/yearTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Year"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toEndOf="@id/lengthTV"
+            app:layout_constraintTop_toBottomOf="@id/actorsET" />
+
+        <EditText
+            android:id="@+id/yearET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/yearTV"
+            app:layout_constraintStart_toStartOf="@id/yearTV"
+            app:layout_constraintTop_toBottomOf="@id/yearTV" />
+
+        <TextView
+            android:id="@+id/shortDescriptionTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Short Description"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleET"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/lengthET" />
+
+        <EditText
+            android:id="@+id/shortDescriptionET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/shortDescriptionTV" />
+
+        <TextView
+            android:id="@+id/mpaRatingTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="MPA Rating"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/criticRatingTV"
+            app:layout_constraintStart_toStartOf="@id/titleET"
+            app:layout_constraintTop_toBottomOf="@id/shortDescriptionET" />
+
+        <EditText
+            android:id="@+id/mpaRatingET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/mpaRatingTV"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/mpaRatingTV" />
+
+        <TextView
+            android:id="@+id/criticRatingTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Critics Rating"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/titleTV"
+            app:layout_constraintStart_toEndOf="@id/mpaRatingTV"
+            app:layout_constraintTop_toBottomOf="@id/shortDescriptionET" />
+
+        <EditText
+            android:id="@+id/criticRatingET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/criticRatingTV"
+            app:layout_constraintStart_toStartOf="@id/criticRatingTV"
+            app:layout_constraintTop_toBottomOf="@id/criticRatingTV" />
+
+        <Button
+            android:id="@+id/cancelBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@id/mpaRatingET"
+            app:layout_constraintStart_toStartOf="@id/titleTV"
+            app:layout_constraintTop_toBottomOf="@id/criticRatingET" />
+
+        <Button
+            android:id="@+id/addBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="Add"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@id/criticRatingTV"
+            app:layout_constraintStart_toStartOf="@id/criticRatingTV"
+            app:layout_constraintTop_toBottomOf="@id/criticRatingET" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
